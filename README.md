@@ -38,6 +38,8 @@ Since our model is trained on the Iris toy dataset, we can test the API by queri
 
 ### In Your Browser
 
+Paste this URL into your browser bar:
+
 `http://0.0.0.0:3000/api/v1.0/predict?sl=4.5&sw=2.3&pl=1.3&pw=0.3`
 
 In your browser you should see something like this:
@@ -48,6 +50,8 @@ In your browser you should see something like this:
 `"predicted_class":0` means that the predicted class is "Iris setosa"
 
 ### Using Curl
+
+Paste this URL into your terminal:
 
 `curl -i "0.0.0.0:3000/api/v1.0/predict?sl=4.5&sw=2.3&pl=1.3&pw=0.3"`
 
