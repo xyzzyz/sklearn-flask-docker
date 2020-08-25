@@ -27,8 +27,6 @@ Create and start (`docker run`) a detached (`-d`) Docker container called sklear
 
 `docker run -p 3000:3333 -d --name sklearn-flask-docker chrisalbon/sklearn-flask-docker:latest`
 
-`http://0.0.0.0:3333/api/v1.0/predict?sl=4.5&sw=2.3&pl=1.3&pw=0.3`
-
 ## 4. Query The Prediction API With An Example Observation
 
 Since our model is trained on the Iris toy dataset, we can test the API by queries it for the predicted class for this example observation:
