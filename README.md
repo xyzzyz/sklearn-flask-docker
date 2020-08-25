@@ -7,13 +7,15 @@ This tutorial requires basic Docker knowledge.
 
 ## 1. Train The Model
 
+For this example we are training a toy model using Iris training dataset. To train a new model, run this:
+
 `python train.py`
 
-This outputs a pickle file called `model.pkl`.
+This outputs a pickle model in a file named `model.pkl`.
 
 ## 2. Build A Docker Image Containing Flask And The Model
 
-Construct an image (`docker build`) called chrisalbon/sklearn-flask-docker (`--tag chrisalbon/sklearn-flask-docker`) from the file called Dockerfile (`.`).
+Construct an image (`docker build`) called chrisalbon/sklearn-flask-docker (`--tag chrisalbon/sklearn-flask-docker`) from the Dockerfile (`.`).
 
 The construction of this image is defined by `Dockerfile`.
 
