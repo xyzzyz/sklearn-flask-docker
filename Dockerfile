@@ -11,7 +11,7 @@ WORKDIR /app/
 
 # Copy requirements.txt outside the container
 # to /app/ inside the container
-COPY requirements.txt /app/\
+COPY requirements.txt /app/
 
 # Install required packages
 RUN pip install -r ./requirements.txt
