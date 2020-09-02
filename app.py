@@ -13,9 +13,12 @@ from sklearn.externals import joblib
 # Create a flask
 app = Flask(__name__)
 
+# Load pickled model file
+model = joblib.load('model.pkl')
+
 # Create an API end point
 @app.route('/api/v1.0/predict', methods=['GET'])
-def get_prediction():
+def get_prediction(trained_model=model):
 
     # sepal length
     sepal_length = float(request.args.get('sl'))
@@ -32,11 +35,8 @@ def get_prediction():
                 petal_length,
                 petal_width]
 
-    # Load pickled model file
-    model = joblib.load('model.pkl')
-
     # Predict the class using the model
-    predicted_class = int(model.predict([features]))
+    predicted_class = int(trained_model.predict([features]))
 
     # Return a json object containing the features and prediction
     return jsonify(features=features, predicted_class=predicted_class)
