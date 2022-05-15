@@ -1,7 +1,7 @@
 # This file defines the Docker container that will contain the Flask app.
 
 # From the source image
-FROM python:3.6-slim
+FROM python:3.6
 
 # Identify maintainer
 LABEL maintainer = "calbon@wikimedia.org"
